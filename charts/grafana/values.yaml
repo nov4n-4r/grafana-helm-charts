@@ -112,8 +112,8 @@ image:
   repository: grafana/grafana
   # Overrides the Grafana image tag whose default is the chart appVersion
   # tag: "{{ .Chart.AppVersion }}-distroless"
-  tag: "13.0-distroless"
-  # tag: "13.2.1-distroless"
+  # tag: "13.0-distroless"
+  tag: "13.2.1-distroless"
   sha: ""
   pullPolicy: IfNotPresent
 
