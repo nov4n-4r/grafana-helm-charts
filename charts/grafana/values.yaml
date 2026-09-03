@@ -304,17 +304,17 @@ hostAliases: []
 
 ingress:
   enabled: false
-  # ingressClassName: nginx
+  ingressClassName: nginx
   # Values can be templated
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
   labels: {}
   path: /
   pathType: Prefix
 
   hosts:
-    - chart-example.local
+    - monitoring.local
   ## Extra paths to prepend to every host configuration. This is useful when working with annotation based services.
   extraPaths: []
   # - path: /*
@@ -580,7 +580,7 @@ initChownData:
 
 # Administrator credentials when not using an existing secret (see below)
 adminUser: admin
-# adminPassword: strongpassword
+adminPassword: strongpassword
 
 # Use an existing secret for the admin user.
 admin:
